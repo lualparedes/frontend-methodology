@@ -22,7 +22,7 @@ Loosely based on [RSCSS](https://github.com/rstacruz/rscss) guidelines. If a dou
 
 Use at least two words separated by a single dash.
 
-```
+```sass
 .card-box { ... }
 ```
 
@@ -170,6 +170,23 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 //     .animationuser2
 //     ...
 @keyframes a-animation-name { ... }
+```
+
+#### Mixins
+:warning: Automate the user generation
+
+```
+// mixin
+// [Description]
+// @arguments
+//     $argument1 // what it is
+//     $argument2 // what it is
+//     ...
+// @users                    
+//     .user1
+//     .user2
+//     ...
+@mixin mixin($arguments) { ... }
 ```
 
 #### Utiliies
