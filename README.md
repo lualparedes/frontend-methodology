@@ -241,8 +241,7 @@ tools/
     _functions.scss
     _mixins.scss
 base/
-    _normalize.scss    # clean browser base
-    _setter.scss       # put my base
+    _resetter.scss     # clean browser base and put mine
     _typography.scss   # define a robust modular vertical rythm 
                        # (make use of mixns and functions)
 utils/
