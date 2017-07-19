@@ -4,20 +4,18 @@ This repo is the documentation of the way I plan and code frontend architectures
 
 ## Contents
 
-- [x] [General description](#general-description)
-- [x] [Naming convention](#naming-convention)
-- [ ] [Comment convention](#comment-convention)
-- [x] [File organization](#file-organization)
-- [x] [Code organization](#code-organization)
-- [ ] Make sure that everything in the sheet is included
+1. [x] [General description](#general-description)
+2. [x] [Naming convention](#naming-convention)
+3. [x] [Comment convention](#comment-convention)
+4. [x] [File organization](#file-organization)
+5. [x] [Code organization](#code-organization)
+6. [ ] Make sure that everything in the sheet is included
 
 ## General description
----
 
 My personal methodology is inspired in object-oriented methodologies and naming conventions applied to CSS, with RSCSS and Atomic Design being the main bluprints.
 
 ## Naming convention
----
 
 Loosely based on [RSCSS](https://github.com/rstacruz/rscss) guidelines. If a doubt can't be solved with what's here, then [refer to RSCSS](http://rscss.io/) itself because it also contains a lot of tips to overcome common problems.
 
@@ -139,7 +137,6 @@ The hooks must be applied regardless of the presence of other selectors. The ide
 Their names are also dash-cased and the attributes follow the guidelines for regular variables.
 
 ## Comment convention
----
 
 ### General guidelines
 - Document whenever something isn't obvious --realy, whenever!-- but nothing more (i.e.: don't waste time commenting stuff you're **completely** sure about remembering and don't need to share with other developers) 
@@ -151,7 +148,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ### Specific cases
 
 #### Superclasses (selectors that have specifications)
-:warn: Automate the specs generation
+:warn: :camel: Automate the specs generation
 
 ```
 // .superclass
@@ -209,7 +206,6 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ```
 
 ## File organization
----
 
 ```
 tools/
@@ -244,7 +240,6 @@ styles.scss            # works as a table of contents too
 
 
 ## Code organization
----
 
 ### Order of blocks
 
@@ -271,7 +266,6 @@ Use the critetia of ITCSS:
 - Never write vendor prefixes (add them with Autoprefixer)
 
 ## Inspiration
----
 
 - [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/)
 - [RSCSS](https://github.com/rstacruz/rscss)
