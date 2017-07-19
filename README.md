@@ -22,7 +22,7 @@ Loosely based on [RSCSS](https://github.com/rstacruz/rscss) guidelines. If a dou
 
 Use at least two words separated by a single dash.
 
-```sass
+```scss
 .card-box { ... }
 ```
 
@@ -32,7 +32,7 @@ Only one word to label the HTML element, which is targeted using the ```>``` chi
 
 If more than one word is needed, then the words are concatenated without separators.
 
-```
+```scss
 .card-news {
     > .title { ... }
     > .importantcontent { ... }
@@ -45,7 +45,7 @@ Special skins with a purely cosmetic change are applied adding an extra class to
 
 This class is a single word preceded by two dashes.
 
-```
+```scss
 .btn {
     &.--big { ... }
 }
@@ -55,7 +55,7 @@ This class is a single word preceded by two dashes.
 
 Specifications are modifiers that have a semantic meaning. They follow the BEM convention for modifiers, and the styles of the superclass are inherited using an @extend directive (to avoid having to write the parent class in the HTML selector).
 
-```
+```scss
 .btn {
     // sass concatentes this in the root level
     &--danger { 
@@ -73,10 +73,10 @@ The key to decide whether a block of styles should be placed in a utility class,
 
 They're labeled with a single word and are placed in the last position in the class attribute of the HTML element it affects.
 
-```
+```scss
 .wrap { ... }
 ```
-```
+```html
 <div class="main-content wrap">
     ...
 </div>
@@ -88,7 +88,7 @@ Special cases when we need to override some styles in a hurry. Bad utilities als
 
 Hacks are designated with the namespace ```_``` and must always be refactored in the near future.
 
-```
+```scss
 _pull-left { ... }
 ```
 
@@ -98,7 +98,7 @@ Animations use the namespace ```a-``` and their unique identifier is composed of
 
 If several words are needed, they are concatenated without separators.
 
-```
+```scss
 @keyframes a-btn-wiggle { ... }
 ```
 
@@ -108,7 +108,7 @@ Triggers and other JS hooks are always labeled with the namespace (```js-```) an
 
 The hooks must be applied regardless of the presence of other selectors. The idea is to keep styles and logic separated.
 
-```
+```html
 <div class="menu-nav">
     ...
     <div class="trigger js-menuTrigger"></div>
@@ -118,11 +118,11 @@ The hooks must be applied regardless of the presence of other selectors. The ide
 ### Sass variables
 
 - Dash-cased
-  ```
+  ```scss
   $useful-variable: 'value';
   ```
 - Abstracted: their name reflect the function of the data, not the content
-  ```
+  ```scss
   $c-main: blue; // instead of $c-blue
   ```
 - Namespaced if possible: these are the useful name spaces:
@@ -149,7 +149,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 #### Superclasses (selectors that have specifications)
 :warning: Automate the specs generation
 
-```
+```scss
 // .superclass
 // [Description]
 // @specs                    // specifications
@@ -162,7 +162,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 #### Animation keyframes 
 :warning: Automate the user generation
 
-```
+```scss
 // a-animation-name
 // [Description]
 // @users
@@ -175,7 +175,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 #### Mixins
 :warning: Automate the user generation
 
-```
+```scss
 // mixin
 // [Description]
 // @arguments
@@ -192,7 +192,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 #### Utiliies
 :warning: Automate the user generation
 
-```
+```scss
 // .utility
 // [Description]
 // @users                    // blocks that contain elems with this utility
@@ -203,7 +203,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ```
 #### Many random long comments in a single block
 
-```
+```scss
 // .selector 
 // [@notes]                  // if .selector has other comments
 // [1] Explan what you need about the section where you placed the marker for 
@@ -233,7 +233,7 @@ base/
     _normalize.scss    # clean browser base
     _setter.scss       # put my base
     _typography.scss   # define a robust modular vertical rythm 
-                       # (make use of mixns and funcs)
+                       # (make use of mixns and functions)
 utils/
     _layout.scss       # grid, wrap, etc.
     _forms.scss        # in, textarea, etc.
