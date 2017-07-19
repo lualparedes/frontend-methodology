@@ -89,7 +89,7 @@ Special cases when we need to override some styles in a hurry. Bad utilities als
 Hacks are designated with the namespace ```_``` and must always be refactored in the near future.
 
 ```scss
-_pull-left { ... }
+._pull-left { ... }
 ```
 
 ### Animations
@@ -214,9 +214,9 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 //     this note
 // ...
 .selector {
-    property1: value; // [1]
-    property2: value; // [2]
-    property3: value; // [3]
+    color: value; // [1]
+    background: value; // [2]
+    font-size: value; // [3]
     ...
 }
 ```
