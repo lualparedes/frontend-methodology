@@ -4,12 +4,11 @@ This repo is the documentation of the way I plan and code frontend architectures
 
 ## Contents
 
-1. [x] [General description](#general-description)
-2. [x] [Naming convention](#naming-convention)
-3. [x] [Comment convention](#comment-convention)
-4. [x] [File organization](#file-organization)
-5. [x] [Code organization](#code-organization)
-6. [ ] Make sure that everything in the sheet is included
+1. [General description](#general-description)
+2. [Naming convention](#naming-convention)
+3. [Comment convention](#comment-convention)
+4. [File organization](#file-organization)
+5. [Code organization](#code-organization)
 
 ## General description
 
