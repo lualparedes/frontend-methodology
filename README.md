@@ -35,8 +35,8 @@ If more than one word is needed, then the words are concatenated without separat
 
 ```
 .card-news {
-	> .title { ... }
-	> .importantcontent { ... }
+    > .title { ... }
+    > .importantcontent { ... }
 }
 ```
 
@@ -48,7 +48,7 @@ This class is a single word preceded by two dashes.
 
 ```
 .btn {
-	&.--big { ... }
+    &.--big { ... }
 }
 ```
 
@@ -58,11 +58,11 @@ Specifications are modifiers that have a semantic meaning. They follow the BEM c
 
 ```
 .btn {
-	// sass concatentes this in the root level
-	&--danger { 
-		@extend .btn;
-		... 
-	}
+    // sass concatentes this in the root level
+    &--danger { 
+        @extend .btn;
+        ... 
+    }
 }
 ```
 
@@ -79,7 +79,7 @@ They're labeled with a single word and are placed in the last position in the cl
 ```
 ```
 <div class="main-content wrap">
-	...
+    ...
 </div>
 ```
 
@@ -111,8 +111,8 @@ The hooks must be applied regardless of the presence of other selectors. The ide
 
 ```
 <div class="menu-nav">
-	...
-	<div class="trigger js-menuTrigger"></div>
+    ...
+    <div class="trigger js-menuTrigger"></div>
 </div>
 ```
 
@@ -127,9 +127,9 @@ The hooks must be applied regardless of the presence of other selectors. The ide
   $c-main: blue; // instead of $c-blue
   ```
 - Namespaced if possible: these are the useful name spaces:
-	- ```c-``` for colors
-	- ```g-``` for gradients
-	- ```f-``` for font stacks
+    - ```c-``` for colors
+    - ```g-``` for gradients
+    - ```f-``` for font stacks
 
 
 ### Sass functions
@@ -148,7 +148,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ### Specific cases
 
 #### Superclasses (selectors that have specifications)
-:warn: :camel: Automate the specs generation
+:warning: Automate the specs generation
 
 ```
 // .superclass
@@ -161,7 +161,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ```
 
 #### Animation keyframes 
-:warn: Automate the user generation
+:warning: Automate the user generation
 
 ```
 // a-animation-name
@@ -174,7 +174,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ```
 
 #### Utiliies
-:warn: Automate the user generation
+:warning: Automate the user generation
 
 ```
 // .utility
@@ -198,10 +198,10 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 //     this note
 // ...
 .selector {
-	property1: value; // [1]
-	property2: value; // [2]
-	property3: value; // [3]
-	...
+    property1: value; // [1]
+    property2: value; // [2]
+    property3: value; // [3]
+    ...
 }
 ```
 
@@ -209,26 +209,26 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ```
 tools/
-	_variables.scss    # use guarded assignation
-	_settings.scss     # redefine variables if needed 
-	_functions.scss
-	_mixins.scss
+    _variables.scss    # use guarded assignation
+    _settings.scss     # redefine variables if needed 
+    _functions.scss
+    _mixins.scss
 base/
-	_normalize.scss    # clean browser base
-	_setter.scss       # put my base
-	_typography.scss   # define a robust modular vertical rythm 
-	                   # (make use of mixns and funcs)
+    _normalize.scss    # clean browser base
+    _setter.scss       # put my base
+    _typography.scss   # define a robust modular vertical rythm 
+                       # (make use of mixns and funcs)
 utils/
-	_layout.scss       # grid, wrap, etc.
-	_forms.scss        # in, textarea, etc.
-	_multimedia.scss   # img, figcaption, svg, etc.
-	_keyframes.scss    # only those that apply to several components
+    _layout.scss       # grid, wrap, etc.
+    _forms.scss        # in, textarea, etc.
+    _multimedia.scss   # img, figcaption, svg, etc.
+    _keyframes.scss    # only those that apply to several components
 atoms/
-	_buttons.scss
+    _buttons.scss
 molecules/
 organisms/
-	_header.scss
-	_footer.scss
+    _header.scss
+    _footer.scss
 templates/             # use @document
 styles.scss            # works as a table of contents too
 ```
