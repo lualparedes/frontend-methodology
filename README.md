@@ -1,7 +1,8 @@
 # Frontend Methodology
 
 This repo is the documentation of the way I plan and code frontend architectures. Its main focus is on design systems, but it will be extended in the short term to include more guidelines regarding logic.
-<br>
+
+---
 
 ## Contents
 
@@ -11,12 +12,14 @@ This repo is the documentation of the way I plan and code frontend architectures
 4. [File organization](#file-organization)
 5. [Code organization](#code-organization)
 
-<br>
+
+---
 
 ## General description
 
 My personal methodology is inspired in object-oriented methodologies and naming conventions applied to CSS, with RSCSS and Atomic Design being the main bluprints.
-<br>
+
+---
 
 ## Naming convention
 
@@ -138,7 +141,8 @@ The hooks must be applied regardless of the presence of other selectors. The ide
 ### Sass functions
 
 Their names are also dash-cased and the attributes follow the guidelines for regular variables.
-<br>
+
+---
 
 ## Comment convention
 
@@ -225,7 +229,8 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
     ...
 }
 ```
-<br>
+
+---
 
 ## File organization
 
@@ -260,7 +265,8 @@ styles.scss            # works as a table of contents too
 - You can also include bare tags outside ```_setter.scss``` as long as they're within the ```base/``` or the ```utils/``` folder
 - Think about the semantic meaning of the selector (according to its function within the UI system)
 
-<br>
+
+---
 
 ## Code organization
 
@@ -287,7 +293,8 @@ Use the critetia of ITCSS:
 - Follow the *Inception Rule* (never go deeper than 3 levels)
 - Maximum nesting: 50 lines
 - Never write vendor prefixes (add them with Autoprefixer)
-<br>
+
+---
 
 ## Inspiration
 
