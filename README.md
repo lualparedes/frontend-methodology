@@ -254,6 +254,7 @@ atoms/
 molecules/
 organisms/
     _header.scss
+    _nav.scss
     _footer.scss
 templates/             # use @document
 styles.scss            # works as a table of contents too
