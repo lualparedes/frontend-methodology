@@ -58,9 +58,9 @@ This class is a single word preceded by two dashes.
 }
 ```
 
-### Specifications
+### Specializations
 
-Specifications are modifiers that have a semantic meaning. They follow the BEM convention for modifiers, and the styles of the superclass are inherited using an @extend directive (to avoid having to write the parent class in the HTML selector).
+Specializations are modifiers that have a semantic meaning. They follow the BEM convention for modifiers, and the styles of the superclass are inherited using an @extend directive (to avoid having to write the parent class in the HTML selector).
 
 ```scss
 .btn {
@@ -148,21 +148,21 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ### General guidelines
 - Document whenever something isn't obvious --realy, whenever!-- but nothing more (i.e.: don't waste time commenting stuff you're **completely** sure about remembering and don't need to share with other developers) 
-- Specifications shoudn't document their parent class, because you can tell
+- Specializations shoudn't document their parent class, because you can tell
  from their name
 - When working with a team, document more exhaustively than how you normally document
 - Only use Sass comments for the sake of readabity
 
 ### Specific cases
 
-#### Superclasses (selectors that have specifications)
+#### Superclasses (selectors that have Specializations)
 :warning: Automate the specs generation
 
 ```scss
 // .superclass
 // ¨¨¨¨¨¨¨¨¨¨¨
 // [Description]
-// @specs                    // specifications
+// @specs                    // Specializations
 //     .superclass--spec1
 //     .superclass--spec2
 //     ...
