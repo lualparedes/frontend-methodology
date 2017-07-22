@@ -160,6 +160,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ```scss
 // .superclass
+// ¨¨¨¨¨¨¨¨¨¨¨
 // [Description]
 // @specs                    // specifications
 //     .superclass--spec1
@@ -173,6 +174,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ```scss
 // a-animation-name
+// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 // [Description]
 // @users
 //     .animationuser1
@@ -186,6 +188,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ```scss
 // mixin
+// ¨¨¨¨¨
 // [Description]
 // @arguments
 //     $argument1 // what it is
@@ -203,6 +206,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ```scss
 // .utility
+// ¨¨¨¨¨¨¨¨
 // [Description]
 // @users                    // blocks that contain elems with this utility
 //     .user1
@@ -214,6 +218,7 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 
 ```scss
 // .selector 
+// ¨¨¨¨¨¨¨¨¨
 // [@notes]                  // if .selector has other comments
 // [1] Explan what you need about the section where you placed the marker for 
 //     this note
@@ -250,6 +255,7 @@ utils/
     _multimedia.scss   # img, figcaption, svg, etc.
     _keyframes.scss    # only those that apply to several components
 atoms/
+    _icons.scss
     _buttons.scss
 molecules/
 organisms/
