@@ -8,6 +8,16 @@ This repo is the documentation of the way I plan and code frontend architectures
 
 1. [General description](#general-description)
 2. [Naming convention](#naming-convention)
+    1. Independent components
+    2. Dependent components
+    3. Modifiers
+    4. Specializations
+    5. Utilities
+    6. Hacks
+    7. Animations
+    8. Javascript hooks
+    9. Sass variables
+    10. Sass functions
 3. [Comment convention](#comment-convention)
 4. [File organization](#file-organization)
 5. [Code organization](#code-organization)
@@ -17,32 +27,28 @@ This repo is the documentation of the way I plan and code frontend architectures
 
 ## General description
 
-My personal methodology is inspired in object-oriented methodologies and naming conventions applied to CSS, with RSCSS and Atomic Design being the main bluprints.
+My personal methodology is inspired in object-oriented methodologies and naming conventions applied to CSS, with BEM and Atomic Design being the main bluprints.
 
 ---
 
 ## Naming convention
 
-Loosely based on [RSCSS](https://github.com/rstacruz/rscss) guidelines. If a doubt can't be solved with what's here, then [refer to RSCSS](http://rscss.io/) itself because it also contains a lot of tips to overcome common problems.
+BEM FTW! :v:
 
-### Independent components 
+### Independent components (BEM *Blocks*)
 
-Use at least two words separated by a single dash.
+Every type of element (atom, molecule, etc.) can be considered a BEM *block* as long as it can convey meaning on its own.
 
 ```scss
-.card-box { ... }
+.card { ... }
 ```
 
-### Dependent components
-
-Only one word to label the HTML element, which is targeted using the ```>``` child selector.
-
-If more than one word is needed, then the words are concatenated without separators.
+### Dependent components (BEM *Elements*)
 
 ```scss
-.card-news {
-    > .title { ... }
-    > .importantcontent { ... }
+.card {
+    &__title { ... }
+    &__content { ... }
 }
 ```
 
@@ -50,17 +56,15 @@ If more than one word is needed, then the words are concatenated without separat
 
 Special skins with a purely cosmetic change are applied adding an extra class to the HTML element.
 
-This class is a single word preceded by two dashes.
-
 ```scss
 .btn {
-    &.--big { ... }
+    &--big { ... }
 }
 ```
 
 ### Specializations
 
-Specializations are modifiers that have a semantic meaning. They follow the BEM convention for modifiers, and the styles of the superclass are inherited using an @extend directive (to avoid having to write the parent class in the HTML selector).
+Specializations are modifiers that have a semantic meaning. They follow the BEM convention for modifiers, and the styles of the superclass are inherited using an @extend directive.
 
 ```scss
 .btn {
@@ -76,9 +80,9 @@ Specializations are modifiers that have a semantic meaning. They follow the BEM 
 
 Versatile styles that are useful to have in a single class. Harry Robert's objects also fall into this category.
 
-The key to decide whether a block of styles should be placed in a utility class, is to ponder how sure you're that the styles don't change regardless of the contex.
+The key to decide whether a block of styles should be placed in a utility class, is to ponder **how sure you are that the styles don't change regardless of the contex**.
 
-They're labeled with a single word and are placed in the last position in the class attribute of the HTML element it affects.
+They're labeled with a single word and are **placed in the last position in the class attribute of the HTML element it affects**.
 
 ```scss
 .wrap { ... }
@@ -101,7 +105,7 @@ Hacks are designated with the namespace ```_``` and must always be refactored in
 
 ### Animations
 
-Animations use the namespace ```a-``` and their unique identifier is composed of two words separated by a single dash, where the first word describes the elements that use the animation and the second describe the animation itself.
+Animations use the namespace ```a-``` and their unique identifier is composed of two words separated by a single dash, where the first word describes the elements that use the animation and the second describes the animation itself.
 
 If several words are needed, they are concatenated without separators.
 
@@ -128,7 +132,7 @@ The hooks must be applied regardless of the presence of other selectors. The ide
   ```scss
   $useful-variable: 'value';
   ```
-- Abstracted: their name reflect the function of the data, not the content
+- Abstracted: their name reflects the function of the data, not the content
   ```scss
   $c-main: blue; // instead of $c-blue
   ```
@@ -147,7 +151,8 @@ Their names are also dash-cased and the attributes follow the guidelines for reg
 ## Comment convention
 
 ### General guidelines
-- Document whenever something isn't obvious --realy, whenever!-- but nothing more (i.e.: don't waste time commenting stuff you're **completely** sure about remembering and don't need to share with other developers) 
+- Document whenever something isn't obvious ─realy, whenever!─ but nothing more (i.e.: don't waste time commenting stuff you're **completely** sure about remembering and don't need to share with other developers) 
+- If you can't avoid using a magic number, at least make sure to add a note explaining where it comes from and what is the problem it solves
 - Specializations shoudn't document their parent class, because you can tell
  from their name
 - When working with a team, document more exhaustively than how you normally document
@@ -266,10 +271,11 @@ templates/             # use @document
 styles.scss            # works as a table of contents too
 ```
 
-### General criteria to choose where to put partials
+### General criteria to choose where to put code
 
 - You can also include bare tags outside ```_setter.scss``` as long as they're within the ```base/``` or the ```utils/``` folder
 - Think about the semantic meaning of the selector (according to its function within the UI system)
+- If there are atoms/molecules that are only "instanced" within a single kind of molecules/organisms, you might place them alongside their common parent to avoid wasting time jumping through different files
 
 
 ---
@@ -294,17 +300,18 @@ Use the critetia of ITCSS:
 7. Nested selectors (if any)
 8. Keyframes right after the block declaration (if the animation only applies to a specific component)
 
-### Other style guidelines
+### Other best practices 
 
 - Follow the *Inception Rule* (never go deeper than 3 levels)
 - Maximum nesting: 50 lines
-- Never write vendor prefixes (add them with Autoprefixer)
+- Never write vendor prefixes (add them with Autoprefixer) 
 
 ---
 
 ## Inspiration
 
 - [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/)
+- [BEM Methodology](https://en.bem.info/methodology/quick-start/)
 - [RSCSS](https://github.com/rstacruz/rscss)
 - [CSS Tricks: Sass Style Guide](https://css-tricks.com/sass-style-guide)
 - [SitePoint: Architecture of a Sass Project](https://www.sitepoint.com/architecture-sass-project/)
