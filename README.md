@@ -297,8 +297,10 @@ Use the critetia of ITCSS:
 4. Properties
 5. Pseudo-classess
 6. Pseudo-elements
-7. Nested selectors (if any)
-8. Keyframes right after the block declaration (if the animation only applies to a specific component)
+7. Elements (```&__```)
+8. Modifiers/specializations (```&--```)
+9. Nested selectors (if any)
+10. Keyframes right after the block declaration (if the animation only applies to a specific component)
 
 ### Other best practices 
 
