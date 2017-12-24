@@ -40,7 +40,7 @@ section titles to denote blocks inside the same file:
 // =============================================================================
 // Text explaining the warning.
 ```
-- Refactoring candidates
+- **Refactoring candidates**
 ```javascript
 // =============================================================================
 //                          🛠️ REFACTORING CANDIDATE 🛠️
@@ -96,4 +96,17 @@ myThirdFunctionThatTakesTheSecondAsInput(
         ) 
     ) 
 );
+```
+
+### Functional operators
+
+```javascript
+source
+    .operator1(data => {
+        // ...
+    })
+    .operator2(data => {
+        // ...
+    })
+    // ...
 ```
